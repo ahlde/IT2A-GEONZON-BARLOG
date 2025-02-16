@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import user.userDashboard;
+import admin.adminDash;
 /**
  *
  * @author axcee
@@ -24,21 +25,31 @@ public class login extends javax.swing.JFrame {
         initComponents();
     }
        
-    userDashboard udb = new userDashboard();
-    public static boolean loginAcc(String username, String password) {
-          Connection connect;
-        dbConnect connector = new dbConnect();
-        String query = "SELECT * FROM user WHERE u_username = ? AND u_password = ?";
-        try (PreparedStatement pstmt = connector.getConnection().prepareStatement(query)) {
-            pstmt.setString(1, username);
-            pstmt.setString(2, password);
-            ResultSet resultSet = pstmt.executeQuery();
-            return resultSet.next();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            return false;
+        userDashboard udb = new userDashboard();
+        public static String loginAcc(String username, String password) {
+            dbConnect connector = new dbConnect();
+            String query = "SELECT u_role, u_status FROM user WHERE u_username = ? AND u_password = ?";
+
+            try (PreparedStatement pstmt = connector.getConnection().prepareStatement(query)) {
+                pstmt.setString(1, username);
+                pstmt.setString(2, password);
+                ResultSet resultSet = pstmt.executeQuery();
+
+                if (resultSet.next()) {
+                    String status = resultSet.getString("u_status");
+
+                    if (status.equalsIgnoreCase("inactive")) {
+                        return "inactive"; // Indicate that the account is inactive
+                    }
+                    return resultSet.getString("u_role"); // Return the user's role if active
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            return null; // Return null if login fails
         }
-    }
+
+
     
 
     /**
@@ -143,20 +154,28 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lloginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lloginMouseClicked
-         String username = userff.getText().trim();
+        String username = userff.getText().trim();
         String password = new String(pwf.getPassword()).trim();
-        
+
         if (username.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please fill in both fields.", "Validation Error", JOptionPane.ERROR_MESSAGE);
-        } else if (loginAcc(username, password)) {
-            JOptionPane.showMessageDialog(this, "Login successful!", "Welcome", JOptionPane.INFORMATION_MESSAGE);
-            // Proceed to the next screen here, e.g., new Dashboard().setVisible(true);
-            this.dispose();
-            udb.setVisible(true);
-            
-            
         } else {
-            JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Failed", JOptionPane.ERROR_MESSAGE);
+            String role = loginAcc(username, password);
+
+            if ("inactive".equals(role)) {
+                JOptionPane.showMessageDialog(this, "Your account is inactive. Please contact support.", "Account Inactive", JOptionPane.WARNING_MESSAGE);
+            } else if (role != null) {
+                JOptionPane.showMessageDialog(this, "Login successful!", "Welcome", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose(); // Close login window
+
+                if (role.equalsIgnoreCase("admin")) {
+                    new adminDash().setVisible(true);  // Redirect to Admin Dashboard
+                } else {
+                    new userDashboard().setVisible(true);   // Redirect to User Dashboard
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Failed", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
     }//GEN-LAST:event_lloginMouseClicked
