@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 import config.dbConnect;
 /**
  *
- * @author axcee
+ * @author ahlde
  */
 public class adminDash extends javax.swing.JFrame {
         dbConnect db = new dbConnect();

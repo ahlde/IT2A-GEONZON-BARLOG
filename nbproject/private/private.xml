@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/axcee/OneDrive/Documents/NetBeansProjects/IT2C-GEONZON-GUI/src/config/dbConnect.java</file>
-            <file>file:/C:/Users/axcee/OneDrive/Documents/NetBeansProjects/IT2C-GEONZON-GUI/src/user/userDashboard.java</file>
-            <file>file:/C:/Users/axcee/OneDrive/Documents/NetBeansProjects/IT2C-GEONZON-GUI/src/auth/login.java</file>
-            <file>file:/C:/Users/axcee/OneDrive/Documents/NetBeansProjects/IT2C-GEONZON-GUI/src/admin/adminDash.java</file>
+            <file>file:/C:/Users/Asus/Desktop/BARLOG%20SYSTEM/IT2A-GEONZON-BARLOG/src/user/userDashboard.java</file>
+            <file>file:/C:/Users/Asus/Desktop/BARLOG%20SYSTEM/IT2A-GEONZON-BARLOG/src/admin/adminDash.java</file>
+            <file>file:/C:/Users/Asus/Desktop/BARLOG%20SYSTEM/IT2A-GEONZON-BARLOG/src/auth/register.java</file>
+            <file>file:/C:/Users/Asus/Desktop/BARLOG%20SYSTEM/IT2A-GEONZON-BARLOG/src/config/dbConnect.java</file>
+            <file>file:/C:/Users/Asus/Desktop/BARLOG%20SYSTEM/IT2A-GEONZON-BARLOG/src/auth/login.java</file>
         </group>
     </open-files>
 </project-private>

@@ -12,11 +12,13 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import user.userDashboard;
 import admin.adminDash;
+import java.sql.Statement;
 /**
  *
- * @author axcee
+ * @author ahlde
  */
 public class login extends javax.swing.JFrame {
+    dbConnect db = new dbConnect();
 
     /**
      * Creates new form login
@@ -24,8 +26,42 @@ public class login extends javax.swing.JFrame {
     public login() {
         initComponents();
     }
+    
+    
+    public String getUserName() {
+        try {
+            Connection conn = db.getConnection(); // Get database connection
+            if (conn == null) {
+                System.out.println("Database connection failed!");
+            } else {
+                
+            }
+
+            String query = "SELECT u_fname FROM user WHERE u_username = '" + this.userff.getText() + "'";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+
+            if(rs.next()) {
+                String userName = rs.getString("u_fname");
+                return userName;
+            }
+            rs.close();
+            stmt.close();
+            conn.close(); // Close the connection to avoid leaks
+
+        } catch (SQLException ex) {
+            System.out.println("Error loading users: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+        return null;
+    }
+    
+    public String name() {
+        return this.userff.getText();
+    }
+    
        
-        userDashboard udb = new userDashboard();
+//        userDashboard udb = new userDashboard();
         public static String loginAcc(String username, String password) {
             dbConnect connector = new dbConnect();
             String query = "SELECT u_role, u_status FROM user WHERE u_username = ? AND u_password = ?";
@@ -43,6 +79,7 @@ public class login extends javax.swing.JFrame {
                     }
                     return resultSet.getString("u_role"); // Return the user's role if active
                 }
+                resultSet.close();
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
@@ -82,28 +119,23 @@ public class login extends javax.swing.JFrame {
 
         Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("BarLog");
         bg1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 130, 40));
 
         login.setBackground(new java.awt.Color(0, 0, 0));
         login.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        login.setForeground(new java.awt.Color(0, 0, 0));
         login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         login.setText("Login");
         bg1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 450, 60));
 
-        userff.setBackground(new java.awt.Color(255, 255, 255));
         userff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         bg1.add(userff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 300, 40));
 
         pwl.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        pwl.setForeground(new java.awt.Color(0, 0, 0));
         pwl.setText("Password");
         bg1.add(pwl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 300, 20));
 
         usl.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        usl.setForeground(new java.awt.Color(0, 0, 0));
         usl.setText("Username");
         bg1.add(usl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 300, 20));
 
@@ -115,6 +147,7 @@ public class login extends javax.swing.JFrame {
         llogin.setForeground(new java.awt.Color(255, 255, 255));
         llogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         llogin.setText("Login");
+        llogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         llogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lloginMouseClicked(evt);
@@ -124,7 +157,6 @@ public class login extends javax.swing.JFrame {
 
         bg1.add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 300, 40));
 
-        pwf.setBackground(new java.awt.Color(255, 255, 255));
         pwf.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         bg1.add(pwf, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 300, 40));
 
@@ -139,7 +171,6 @@ public class login extends javax.swing.JFrame {
         bg1.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 60, 20));
 
         usl2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        usl2.setForeground(new java.awt.Color(0, 0, 0));
         usl2.setText("Don't have an account?");
         bg1.add(usl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 140, 20));
 
@@ -171,7 +202,7 @@ public class login extends javax.swing.JFrame {
                 if (role.equalsIgnoreCase("admin")) {
                     new adminDash().setVisible(true);  // Redirect to Admin Dashboard
                 } else {
-                    new userDashboard().setVisible(true);   // Redirect to User Dashboard
+                    new userDashboard(getUserName()).setVisible(true);   // Redirect to User Dashboard
                 }
             } else {
                 JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Failed", JOptionPane.ERROR_MESSAGE);
