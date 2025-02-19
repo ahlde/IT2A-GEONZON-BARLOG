@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2025 at 04:13 AM
+-- Generation Time: Feb 19, 2025 at 09:43 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,72 @@ SET time_zone = "+00:00";
 --
 -- Database: `baranggay`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `barangay`
+--
+
+CREATE TABLE `barangay` (
+  `b_barangayID` int(11) NOT NULL,
+  `b_barangayname` text NOT NULL,
+  `b_municipality` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `barangay_official`
+--
+
+CREATE TABLE `barangay_official` (
+  `bo_officialID` int(11) NOT NULL,
+  `bo_citizenID` int(11) NOT NULL,
+  `bo_position` int(11) NOT NULL,
+  `bo_termstart` text NOT NULL,
+  `bo_termend` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `citizen`
+--
+
+CREATE TABLE `citizen` (
+  `c_firstname` text NOT NULL,
+  `c_lastname` text NOT NULL,
+  `c_birthday` text NOT NULL,
+  `c_address` text NOT NULL,
+  `c-contactnum` text NOT NULL,
+  `c_purokID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `purok`
+--
+
+CREATE TABLE `purok` (
+  `p_purokID` int(11) NOT NULL,
+  `p_purokname` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `purok_leader`
+--
+
+CREATE TABLE `purok_leader` (
+  `pl_leaderID` int(11) NOT NULL,
+  `pl_citizenID` int(11) NOT NULL,
+  `pl_purokID` int(11) NOT NULL,
+  `pl_termstart` text NOT NULL,
+  `pl_termend` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
