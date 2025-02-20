@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package auth;
 import config.dbConnect;
 import java.sql.Connection;
@@ -110,16 +105,17 @@ public class login extends javax.swing.JFrame {
         register = new javax.swing.JLabel();
         usl2 = new javax.swing.JLabel();
         Bg2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bg1.setBackground(new java.awt.Color(231, 236, 239));
+        bg1.setBackground(new java.awt.Color(204, 204, 255));
         bg1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Title.setText("BarLog");
+        Title.setText("BARLOG");
         bg1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 130, 40));
 
         login.setBackground(new java.awt.Color(0, 0, 0));
@@ -129,6 +125,11 @@ public class login extends javax.swing.JFrame {
         bg1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 450, 60));
 
         userff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        userff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userffActionPerformed(evt);
+            }
+        });
         bg1.add(userff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 300, 40));
 
         pwl.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -162,13 +163,13 @@ public class login extends javax.swing.JFrame {
 
         register.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         register.setForeground(new java.awt.Color(39, 76, 119));
-        register.setText("Register?");
+        register.setText("Register here?");
         register.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 registerMouseClicked(evt);
             }
         });
-        bg1.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 60, 20));
+        bg1.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 90, 20));
 
         usl2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         usl2.setText("Don't have an account?");
@@ -176,8 +177,15 @@ public class login extends javax.swing.JFrame {
 
         getContentPane().add(bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 600));
 
-        Bg2.setBackground(new java.awt.Color(39, 76, 119));
+        Bg2.setBackground(new java.awt.Color(153, 153, 255));
+        Bg2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setBackground(new java.awt.Color(153, 153, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/3798720.PNG"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        Bg2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 570));
+
         getContentPane().add(Bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 450, 600));
 
         pack();
@@ -218,6 +226,10 @@ public class login extends javax.swing.JFrame {
         rgs.setVisible(true);
     }//GEN-LAST:event_registerMouseClicked
 
+    private void userffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userffActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userffActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -257,6 +269,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel Bg2;
     private javax.swing.JLabel Title;
     private javax.swing.JPanel bg1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel llogin;
     private javax.swing.JLabel login;
     private javax.swing.JPanel loginbtn;

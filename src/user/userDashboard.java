@@ -66,12 +66,12 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        kilidpanel.setBackground(new java.awt.Color(39, 76, 119));
+        kilidpanel.setBackground(new java.awt.Color(153, 153, 255));
         kilidpanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         kilidpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        profile.setBackground(new java.awt.Color(96, 150, 186));
-        profile.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        profile.setBackground(new java.awt.Color(204, 204, 255));
+        profile.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         profile.setForeground(new java.awt.Color(255, 255, 255));
         profile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -83,15 +83,14 @@ public class userDashboard extends javax.swing.JFrame {
         });
         profile.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Profile");
         profile.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
         kilidpanel.add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 260, 30));
 
-        home.setBackground(new java.awt.Color(96, 150, 186));
-        home.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        home.setBackground(new java.awt.Color(204, 204, 255));
+        home.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         home.setForeground(new java.awt.Color(255, 255, 255));
         home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -103,7 +102,6 @@ public class userDashboard extends javax.swing.JFrame {
         });
         home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Home");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,8 +113,8 @@ public class userDashboard extends javax.swing.JFrame {
 
         kilidpanel.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 260, 30));
 
-        help.setBackground(new java.awt.Color(96, 150, 186));
-        help.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        help.setBackground(new java.awt.Color(204, 204, 255));
+        help.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         help.setForeground(new java.awt.Color(255, 255, 255));
         help.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -128,7 +126,6 @@ public class userDashboard extends javax.swing.JFrame {
         });
         help.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Help");
         help.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
@@ -139,8 +136,8 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ix--user-profile.png"))); // NOI18N
         kilidpanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 130));
 
-        request.setBackground(new java.awt.Color(96, 150, 186));
-        request.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        request.setBackground(new java.awt.Color(204, 204, 255));
+        request.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         request.setForeground(new java.awt.Color(255, 255, 255));
         request.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -152,15 +149,14 @@ public class userDashboard extends javax.swing.JFrame {
         });
         request.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Request");
         request.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
         kilidpanel.add(request, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 260, 30));
 
-        logout.setBackground(new java.awt.Color(96, 150, 186));
-        logout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        logout.setBackground(new java.awt.Color(204, 204, 255));
+        logout.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         logout.setForeground(new java.awt.Color(255, 255, 255));
         logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -172,7 +168,6 @@ public class userDashboard extends javax.swing.JFrame {
         });
         logout.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Logout");
         logout.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
@@ -181,8 +176,8 @@ public class userDashboard extends javax.swing.JFrame {
 
         jPanel2.add(kilidpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 260, 500));
 
-        babaw.setBackground(new java.awt.Color(39, 76, 119));
-        babaw.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        babaw.setBackground(new java.awt.Color(153, 153, 255));
+        babaw.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         babaw.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -192,14 +187,14 @@ public class userDashboard extends javax.swing.JFrame {
 
         jPanel2.add(babaw, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 100));
 
-        welcomeMessage.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        welcomeMessage.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         welcomeMessage.setForeground(new java.awt.Color(51, 51, 51));
         welcomeMessage.setText("Welcome Back, ");
-        jPanel2.add(welcomeMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 270, -1));
+        jPanel2.add(welcomeMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 270, -1));
 
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Date: 2025");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 270, 30));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 270, 30));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

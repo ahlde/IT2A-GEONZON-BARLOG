@@ -85,8 +85,8 @@ public class register extends javax.swing.JFrame {
         bg1.setBackground(new java.awt.Color(231, 236, 239));
         bg1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/2.png"))); // NOI18N
-        bg1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/3798720.PNG"))); // NOI18N
+        bg1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, -1));
 
         getContentPane().add(bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 600));
 
@@ -111,11 +111,9 @@ public class register extends javax.swing.JFrame {
         usl.setText("Username");
         Bg2.add(usl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 300, 20));
 
-        userff.setBackground(new java.awt.Color(255, 255, 255));
         userff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Bg2.add(userff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, 30));
 
-        pwf.setBackground(new java.awt.Color(255, 255, 255));
         pwf.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Bg2.add(pwf, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 300, 30));
 
@@ -124,7 +122,6 @@ public class register extends javax.swing.JFrame {
         pwl.setText("Password");
         Bg2.add(pwl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 300, 20));
 
-        email.setBackground(new java.awt.Color(255, 255, 255));
         email.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Bg2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 300, 30));
 
@@ -138,7 +135,6 @@ public class register extends javax.swing.JFrame {
         lname1.setText("Last Name");
         Bg2.add(lname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 140, 20));
 
-        lname.setBackground(new java.awt.Color(255, 255, 255));
         lname.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +143,6 @@ public class register extends javax.swing.JFrame {
         });
         Bg2.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 140, 30));
 
-        fname1.setBackground(new java.awt.Color(255, 255, 255));
         fname1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Bg2.add(fname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 140, 30));
 
@@ -156,7 +151,6 @@ public class register extends javax.swing.JFrame {
         emaill.setText("Email");
         Bg2.add(emaill, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 120, 20));
 
-        adff.setBackground(new java.awt.Color(255, 255, 255));
         adff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Bg2.add(adff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 300, 30));
 
@@ -165,7 +159,6 @@ public class register extends javax.swing.JFrame {
         adl.setText("Address");
         Bg2.add(adl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 120, 20));
 
-        contactff.setBackground(new java.awt.Color(255, 255, 255));
         contactff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Bg2.add(contactff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 30));
 
@@ -179,7 +172,6 @@ public class register extends javax.swing.JFrame {
 
         register.setBackground(new java.awt.Color(0, 0, 0));
         register.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        register.setForeground(new java.awt.Color(0, 0, 0));
         register.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         register.setText("Register");
         register.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,7 +203,6 @@ public class register extends javax.swing.JFrame {
         rolel.setText("Role");
         Bg2.add(rolel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 300, 20));
 
-        roleb.setBackground(new java.awt.Color(255, 255, 255));
         roleb.setForeground(new java.awt.Color(255, 255, 255));
         roleb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Role", "Citizen", "Officials" }));
         Bg2.add(roleb, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 300, 30));
