@@ -63,7 +63,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(900, 600));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         kilidpanel.setBackground(new java.awt.Color(153, 153, 255));
@@ -87,7 +87,7 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel1.setText("Profile");
         profile.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
-        kilidpanel.add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 260, 30));
+        kilidpanel.add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 240, 30));
 
         home.setBackground(new java.awt.Color(204, 204, 255));
         home.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -111,7 +111,7 @@ public class userDashboard extends javax.swing.JFrame {
         });
         home.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
-        kilidpanel.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 260, 30));
+        kilidpanel.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 240, 30));
 
         help.setBackground(new java.awt.Color(204, 204, 255));
         help.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -130,7 +130,7 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel3.setText("Help");
         help.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
-        kilidpanel.add(help, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 260, 30));
+        kilidpanel.add(help, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 240, 30));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ix--user-profile.png"))); // NOI18N
@@ -153,7 +153,7 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel5.setText("Request");
         request.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
-        kilidpanel.add(request, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 260, 30));
+        kilidpanel.add(request, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 240, 30));
 
         logout.setBackground(new java.awt.Color(204, 204, 255));
         logout.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -172,7 +172,7 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel6.setText("Logout");
         logout.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
-        kilidpanel.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 260, 30));
+        kilidpanel.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 240, 30));
 
         jPanel2.add(kilidpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 260, 500));
 

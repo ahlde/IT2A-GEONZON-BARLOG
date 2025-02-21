@@ -55,9 +55,9 @@ public class register extends javax.swing.JFrame {
 
         bg1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Bg2 = new javax.swing.JPanel();
+        bg2 = new javax.swing.JPanel();
         login = new javax.swing.JLabel();
-        Title = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         usl = new javax.swing.JLabel();
         userff = new javax.swing.JTextField();
         pwf = new javax.swing.JPasswordField();
@@ -82,7 +82,7 @@ public class register extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bg1.setBackground(new java.awt.Color(231, 236, 239));
+        bg1.setBackground(new java.awt.Color(153, 153, 255));
         bg1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/3798720.PNG"))); // NOI18N
@@ -90,50 +90,44 @@ public class register extends javax.swing.JFrame {
 
         getContentPane().add(bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 600));
 
-        Bg2.setBackground(new java.awt.Color(39, 76, 119));
-        Bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        bg2.setBackground(new java.awt.Color(204, 204, 255));
+        bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         login.setBackground(new java.awt.Color(0, 0, 0));
         login.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
         login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         login.setText("Register");
-        Bg2.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 450, 60));
+        bg2.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 450, 60));
 
-        Title.setBackground(new java.awt.Color(0, 0, 0));
-        Title.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Title.setForeground(new java.awt.Color(255, 255, 255));
-        Title.setText("BarLog");
-        Bg2.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 130, 40));
+        title.setBackground(new java.awt.Color(0, 0, 0));
+        title.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        title.setText("BARLOG");
+        bg2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 130, 40));
 
         usl.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        usl.setForeground(new java.awt.Color(255, 255, 255));
         usl.setText("Username");
-        Bg2.add(usl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 300, 20));
+        bg2.add(usl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 300, 20));
 
         userff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Bg2.add(userff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, 30));
+        bg2.add(userff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, 30));
 
         pwf.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Bg2.add(pwf, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 300, 30));
+        bg2.add(pwf, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 300, 30));
 
         pwl.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        pwl.setForeground(new java.awt.Color(255, 255, 255));
         pwl.setText("Password");
-        Bg2.add(pwl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 300, 20));
+        bg2.add(pwl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 300, 20));
 
         email.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Bg2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 300, 30));
+        bg2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 300, 30));
 
         ffname1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        ffname1.setForeground(new java.awt.Color(255, 255, 255));
         ffname1.setText("First Name");
-        Bg2.add(ffname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 140, 20));
+        bg2.add(ffname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 140, 20));
 
         lname1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lname1.setForeground(new java.awt.Color(255, 255, 255));
         lname1.setText("Last Name");
-        Bg2.add(lname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 140, 20));
+        bg2.add(lname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 140, 20));
 
         lname.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lname.addActionListener(new java.awt.event.ActionListener() {
@@ -141,31 +135,28 @@ public class register extends javax.swing.JFrame {
                 lnameActionPerformed(evt);
             }
         });
-        Bg2.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 140, 30));
+        bg2.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 140, 30));
 
         fname1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Bg2.add(fname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 140, 30));
+        bg2.add(fname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 140, 30));
 
         emaill.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        emaill.setForeground(new java.awt.Color(255, 255, 255));
         emaill.setText("Email");
-        Bg2.add(emaill, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 120, 20));
+        bg2.add(emaill, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 120, 20));
 
         adff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Bg2.add(adff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 300, 30));
+        bg2.add(adff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 300, 30));
 
         adl.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        adl.setForeground(new java.awt.Color(255, 255, 255));
         adl.setText("Address");
-        Bg2.add(adl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 120, 20));
+        bg2.add(adl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 120, 20));
 
         contactff.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Bg2.add(contactff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 30));
+        bg2.add(contactff, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 30));
 
         contl.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        contl.setForeground(new java.awt.Color(255, 255, 255));
         contl.setText("Contact #");
-        Bg2.add(contl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 120, 20));
+        bg2.add(contl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 120, 20));
 
         regisiterbtn.setBackground(new java.awt.Color(255, 255, 255));
         regisiterbtn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -181,33 +172,31 @@ public class register extends javax.swing.JFrame {
         });
         regisiterbtn.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
 
-        Bg2.add(regisiterbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 300, 40));
+        bg2.add(regisiterbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 300, 40));
 
         usl1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        usl1.setForeground(new java.awt.Color(163, 206, 241));
+        usl1.setForeground(new java.awt.Color(51, 102, 255));
         usl1.setText("Login here.");
         usl1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 usl1MouseClicked(evt);
             }
         });
-        Bg2.add(usl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 570, 90, 20));
+        bg2.add(usl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 570, 90, 20));
 
         usl2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        usl2.setForeground(new java.awt.Color(255, 255, 255));
         usl2.setText("Already have an account?");
-        Bg2.add(usl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 140, 20));
+        bg2.add(usl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 140, 20));
 
         rolel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        rolel.setForeground(new java.awt.Color(255, 255, 255));
         rolel.setText("Role");
-        Bg2.add(rolel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 300, 20));
+        bg2.add(rolel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 300, 20));
 
         roleb.setForeground(new java.awt.Color(255, 255, 255));
         roleb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Role", "Citizen", "Officials" }));
-        Bg2.add(roleb, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 300, 30));
+        bg2.add(roleb, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 300, 30));
 
-        getContentPane().add(Bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 450, 600));
+        getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 450, 600));
 
         pack();
         setLocationRelativeTo(null);
@@ -334,11 +323,10 @@ public class register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Bg2;
-    private javax.swing.JLabel Title;
     private javax.swing.JTextField adff;
     private javax.swing.JLabel adl;
     private javax.swing.JPanel bg1;
+    private javax.swing.JPanel bg2;
     private javax.swing.JTextField contactff;
     private javax.swing.JLabel contl;
     private javax.swing.JTextField email;
@@ -355,6 +343,7 @@ public class register extends javax.swing.JFrame {
     private javax.swing.JLabel register;
     private javax.swing.JComboBox<String> roleb;
     private javax.swing.JLabel rolel;
+    private javax.swing.JLabel title;
     private javax.swing.JTextField userff;
     private javax.swing.JLabel usl;
     private javax.swing.JLabel usl1;
