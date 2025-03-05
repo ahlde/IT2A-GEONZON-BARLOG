@@ -209,16 +209,21 @@ public class register extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please fill out the registration form", "Empty Form", JOptionPane.ERROR_MESSAGE);
             return;
         }
-   
+
+        
+
+        // Validate First Name
         if (fname1.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "First Name cannot be empty", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         }
 
         // Validate Last Name
         if (lname.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Last Name cannot be empty", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         }
 
         // Validate Email
@@ -226,9 +231,11 @@ public class register extends javax.swing.JFrame {
         if (emailText.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Email cannot be empty", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         } else if (!isValidEmail(emailText)) {
             JOptionPane.showMessageDialog(this, "Invalid email format", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         }
 
         // Validate Contact Number
@@ -236,9 +243,11 @@ public class register extends javax.swing.JFrame {
         if (contactText.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Contact Number cannot be empty", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         } else if (!contactText.matches("\\d+")) {
             JOptionPane.showMessageDialog(this, "Contact Number must contain only numbers", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         }
 
         // Validate Username
@@ -246,9 +255,11 @@ public class register extends javax.swing.JFrame {
         if (usernameText.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Username cannot be empty", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         } else if (isUsernameTaken(usernameText)) {
             JOptionPane.showMessageDialog(this, "Username is already taken", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         }
 
         // Validate Password
@@ -256,23 +267,26 @@ public class register extends javax.swing.JFrame {
         if (passwordText.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Password cannot be empty", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         } else if (passwordText.length() < 8) {
             JOptionPane.showMessageDialog(this, "Password must be at least 8 characters long", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         }
 
         // Validate Role
         if (roleb.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(this, "Please select a role", "Validation Error", JOptionPane.ERROR_MESSAGE);
             isValid = false;
+            return; // Stop further checks
         }
 
         // If all validations pass, proceed with registration
         if (isValid) {
             // TODO: Implement actual registration logic
             JOptionPane.showMessageDialog(this, "Registration Successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
-             
         }
+
     }//GEN-LAST:event_registerMouseClicked
 
     private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
