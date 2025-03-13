@@ -110,7 +110,7 @@ public class login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bg1.setBackground(new java.awt.Color(204, 204, 255));
+        bg1.setBackground(new java.awt.Color(216, 215, 220));
         bg1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Title.setBackground(new java.awt.Color(0, 0, 0));
@@ -143,7 +143,7 @@ public class login extends javax.swing.JFrame {
         loginbtn.setBackground(new java.awt.Color(39, 76, 119));
         loginbtn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        llogin.setBackground(new java.awt.Color(0, 0, 0));
+        llogin.setBackground(new java.awt.Color(58, 53, 80));
         llogin.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         llogin.setForeground(new java.awt.Color(255, 255, 255));
         llogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -177,11 +177,11 @@ public class login extends javax.swing.JFrame {
 
         getContentPane().add(bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 600));
 
-        Bg2.setBackground(new java.awt.Color(153, 153, 255));
+        Bg2.setBackground(new java.awt.Color(137, 134, 150));
         Bg2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setBackground(new java.awt.Color(153, 153, 255));
+        jLabel2.setBackground(new java.awt.Color(137, 134, 150));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/3798720.PNG"))); // NOI18N
         jLabel2.setText("jLabel2");
         Bg2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 570));

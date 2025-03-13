@@ -28,7 +28,7 @@ public class userDashboard extends javax.swing.JFrame {
      */
     public userDashboard(String text) {
         initComponents();
-        welcomeMessage.setText("Welcome back, " + text + "!");
+        welcomeMessage.setText("Welcome , " + text + "!");
     }
      
     /**
@@ -63,14 +63,14 @@ public class userDashboard extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(900, 600));
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(216, 215, 220));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        kilidpanel.setBackground(new java.awt.Color(153, 153, 255));
+        kilidpanel.setBackground(new java.awt.Color(137, 134, 150));
         kilidpanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         kilidpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        profile.setBackground(new java.awt.Color(204, 204, 255));
+        profile.setBackground(new java.awt.Color(58, 53, 80));
         profile.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         profile.setForeground(new java.awt.Color(255, 255, 255));
         profile.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,13 +83,14 @@ public class userDashboard extends javax.swing.JFrame {
         });
         profile.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Profile");
         profile.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
         kilidpanel.add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 240, 30));
 
-        home.setBackground(new java.awt.Color(204, 204, 255));
+        home.setBackground(new java.awt.Color(58, 53, 80));
         home.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         home.setForeground(new java.awt.Color(255, 255, 255));
         home.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,6 +103,7 @@ public class userDashboard extends javax.swing.JFrame {
         });
         home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Home");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -113,7 +115,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         kilidpanel.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 240, 30));
 
-        help.setBackground(new java.awt.Color(204, 204, 255));
+        help.setBackground(new java.awt.Color(58, 53, 80));
         help.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         help.setForeground(new java.awt.Color(255, 255, 255));
         help.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,6 +128,7 @@ public class userDashboard extends javax.swing.JFrame {
         });
         help.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Help");
         help.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
@@ -136,7 +139,7 @@ public class userDashboard extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ix--user-profile.png"))); // NOI18N
         kilidpanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 130));
 
-        request.setBackground(new java.awt.Color(204, 204, 255));
+        request.setBackground(new java.awt.Color(58, 53, 80));
         request.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         request.setForeground(new java.awt.Color(255, 255, 255));
         request.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -149,13 +152,14 @@ public class userDashboard extends javax.swing.JFrame {
         });
         request.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Request");
         request.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
 
         kilidpanel.add(request, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 240, 30));
 
-        logout.setBackground(new java.awt.Color(204, 204, 255));
+        logout.setBackground(new java.awt.Color(58, 53, 80));
         logout.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         logout.setForeground(new java.awt.Color(255, 255, 255));
         logout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,6 +172,7 @@ public class userDashboard extends javax.swing.JFrame {
         });
         logout.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Logout");
         logout.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 60, 30));
@@ -176,7 +181,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         jPanel2.add(kilidpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 260, 500));
 
-        babaw.setBackground(new java.awt.Color(153, 153, 255));
+        babaw.setBackground(new java.awt.Color(137, 134, 150));
         babaw.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         babaw.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -189,7 +194,7 @@ public class userDashboard extends javax.swing.JFrame {
 
         welcomeMessage.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         welcomeMessage.setForeground(new java.awt.Color(51, 51, 51));
-        welcomeMessage.setText("Welcome Back, ");
+        welcomeMessage.setText("Welcome ,");
         jPanel2.add(welcomeMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 270, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
